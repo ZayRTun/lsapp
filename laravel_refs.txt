@@ -1,0 +1,30 @@
+// create a laravel project
+- composer create-project laravel/laravel lsapp
+
+// serve on php built-in server
+- php artisan serve
+
+// creating routes with controllers
+- Route::get('/', 'PagesController@index');
+
+// default layout.php
+-     <body>
+          @yield('content')
+      </body>
+  </html>
+
+  // index.php
+- @extends('layouts.app')
+
+  @section('content')
+      <h1>Welcome To Laravel</h1>
+      <p>This is the Laravel application from the "Laravel From Scratch" youtube series.</p>
+  @endsection
+
+// to load something from the public asset folder
+- href={{asset('css/app.css')}}
+
+// to compile assets
+- npm run dev / npm run watch
+
+--Series Part 5
