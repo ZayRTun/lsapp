@@ -25,5 +25,10 @@ Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
 
 
+/*you can create all routes manually as above but below is a shortcut*/
+Route::resource('posts', 'PostsController');
+
+
+
 
 

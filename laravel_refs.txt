@@ -1,11 +1,14 @@
 // create a laravel project
 - composer create-project laravel/laravel lsapp
 
+
 // serve on php built-in server
 - php artisan serve
 
+
 // creating routes with controllers
 - Route::get('/', 'PagesController@index');
+
 
 // default layout.php
 -     <body>
@@ -21,10 +24,46 @@
       <p>This is the Laravel application from the "Laravel From Scratch" youtube series.</p>
   @endsection
 
+
 // to load something from the public asset folder
 - href={{asset('css/app.css')}}
+
 
 // to compile assets
 - npm run dev / npm run watch
 
+
+// to install all composer dependencies
+- composer install
+
 --Series Part 5
+
+// to create controller with artisan
+- php artisan make:controller PostsController
+
+
+// to create a model with migration to create a table
+- php artisan make:model Post -m // -m for migration
+
+
+// to run migration or create table
+- php artisan migrate
+
+// to use tinker for database CRUD operations
+- php artisan tinker
+  >>>
+  - App\Post::count() // App\model name -> methods
+  - $post = new App\Post() // creates a new instance/object held in memory
+  - $post->title = 'title'
+  - $post->save(); // to update the post table
+
+
+// to create a controller with all CRUD resources
+- php artisan make:controller PostsController --resource
+
+
+// to get a list of routes
+- php artisan route:list
+
+
+--Series Part 6
